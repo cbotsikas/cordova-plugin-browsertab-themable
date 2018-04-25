@@ -47,11 +47,13 @@
   }
 
   _safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+  /* this doesn't work with Xcode7
   if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
       _safariViewController.preferredBarTintColor = [self colorFromRGBA:  [themeableArgs objectForKey:@"toolbarColor"] ?: @"#ffffff"];
   } else {
       _safariViewController.view.tintColor = [self colorFromRGBA:  [themeableArgs objectForKey:@"toolbarColor"] ?: @"#ffffff"];
   }
+  */
 
   [self.viewController presentViewController:_safariViewController animated:YES completion:nil];
 
